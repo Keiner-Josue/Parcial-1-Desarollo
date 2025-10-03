@@ -3,30 +3,30 @@
     "nombre": "Paquete Cancún 5 días todo incluido",
     "precio": 4800000,
     "descripcion": "Vuelo + hotel todo incluido frente al mar.",
-    "imagen": "assests/images/cancun.jpg"
+    "imagen": "assets/images/cancun.jpg"
   },
   {
-    "nombre": "paquete Barcelona 10 días cultural",
+    "nombre": "Paquete Barcelona 10 días cultural",
     "precio": 10000000,
     "descripcion": "Visita París, Roma y Madrid con guía turístico.",
-    "imagen": "assests/images/barcelona.jpg"
+    "imagen": "assets/images/barcelona.jpg"
   },
   {
-    "nombre": "Cartagena 7 dias de sol y playa",
+    "nombre": "Paquete Cartagena 7 días de sol y playa",
     "precio": 3600000,
     "descripcion": "Excursión guiada con hospedaje incluido.",
-    "imagen": "assests/images/cartagena.jpg"
+    "imagen": "assets/images/cartagena.jpg"
   },
   {
-    "nombre": "New York 14 dias de maxima diversion",
+    "nombre": "Paquete New York 14 días de máxima diversión",
     "precio": 3000000,
-    "descripcion": "Disfruta Cartagena y San Andrés en un paquete de lujo.",
-    "imagen": "assests/images/newyork.jpg"
+    "descripcion": "Disfruta de una experiencia inolvidable en la Gran Manzana.",
+    "imagen": "assets/images/newyork.jpg"
   },
   {
-    "nombre": "Tokio 12 dias de cultura y tecnologia",
+    "nombre": "Paquete Tokio 12 días de cultura y tecnología",
     "precio": 7200000,
-    "descripcion": "Diversión total en los parques de Disney World.",
-    "imagen": "assests/images/tokio.jpg"
+    "descripcion": "Explora la modernidad de Tokio y sus tradiciones únicas.",
+    "imagen": "assets/images/tokio.jpg"
   }
 ]

@@ -1,3 +1,4 @@
+// login.js
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
   const usernameInput = document.getElementById("username");
@@ -6,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const validUsers = [
     { username: "admin", password: "1234" },
-    { username: "makina", password: "rey2025" } // puedes agregar más
+    { username: "makina", password: "rey2025" }
   ];
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", e => {
     e.preventDefault();
 
     const username = usernameInput.value.trim().toLowerCase();
@@ -20,13 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     if (isValid) {
-      errorMessage.textContent = "";
-      window.location.href = "index.html"; // ruta corregida si index está en /structure
+      // Guardar sesión
+      sessionStorage.setItem("loggedIn", "true");
+      sessionStorage.setItem("usuario", username);
+
+      // Redirigir al inicio (index.html en la misma carpeta del login)
+      window.location.href = "index.html";
     } else {
       errorMessage.textContent = "⚠️ Usuario o contraseña incorrectos.";
       errorMessage.classList.add("error");
-      usernameInput.classList.add("input-error");
-      passwordInput.classList.add("input-error");
+
+      [usernameInput, passwordInput].forEach(i =>
+        i.classList.add("input-error")
+      );
     }
   });
 

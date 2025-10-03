@@ -2,23 +2,35 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Login - TravelNow</title>
+  <title>Iniciar Sesión - TravelNow</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Iniciar Sesión</h2>
-    <form id="loginForm">
-      <label for="username">Usuario</label>
-      <input type="text" id="username" name="username" autocomplete="username" required>
+  <header class="header">
+    <h1>🌍 TravelNow</h1>
+    <p>Tu próxima aventura comienza aquí</p>
+  </header>
 
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" name="password" autocomplete="current-password" required>
+  <main>
+    <section class="login-section">
+      <h2>Iniciar Sesión</h2>
+      <form id="login-form">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
 
-      <button type="submit">Ingresar</button>
-    </form>
-    <p id="error-message" class="error"></p>
-  </div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
 
-  <script src="../Parcial-1-Desarollo/js/login.js"></script> <!-- Ruta correcta si login.js está en js/ -->
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 TravelNow - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Conexión al archivo JS -->
+  <script src="js/login.js"></script>
 </body>
 </html>

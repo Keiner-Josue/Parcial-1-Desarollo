@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loadFragment = (id, url) => {
     fetch(url)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById(id).innerHTML = html;
+      .then(res => {
+        if (!res.ok) throw new Error(`Error ${res.status}`);
+        return res.text();
       })
-      .catch(err => {
-        console.error(`Error al cargar ${url}:`, err);
-      });
+      .then(html => {
+        const element = document.getElementById(id);
+        if (element) element.innerHTML = html;
+      })
+      .catch(err => console.error(`Error al cargar ${url}:`, err));
   };
 
   loadFragment("header", "structure/header.html");
