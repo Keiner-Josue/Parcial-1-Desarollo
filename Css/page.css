@@ -1,0 +1,28 @@
+
+.login-container {
+  max-width: 400px;
+  margin: 8% auto;
+  background: #2A2A2A;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.login-container h2 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+/* Paquetes */
+.packages {
+  display: grid;
+  gap: 1.5rem;
+}
+.packages article {
+  background: #2A2A2A;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--color-primary);
+}
+.packages h3 {
+  color: var(--color-secondary);
+}
