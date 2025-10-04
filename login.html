@@ -3,34 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Iniciar Sesión - TravelNow</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/utilities.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
     <h1>🌍 TravelNow</h1>
     <p>Tu próxima aventura comienza aquí</p>
   </header>
 
+  <!-- Contenido -->
   <main>
     <section class="login-section">
-      <h2>Iniciar Sesión</h2>
-      <form id="login-form">
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+      <div class="login-card">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+          <label for="username">Usuario</label>
+          <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
 
-        <button type="submit">Ingresar</button>
-      </form>
+          <button type="submit" class="btn-primary">Ingresar</button>
+        </form>
+        <p id="error-message" class="error"></p>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 TravelNow - Todos los derechos reservados</p>
   </footer>
 
-  <!-- Conexión al archivo JS -->
   <script src="js/login.js"></script>
 </body>
 </html>

@@ -4,31 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Paquetes Turísticos - TravelNow</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/utilities.css">
 </head>
 
 <body>
-    <header id="header"></header>
+    <!-- Header dinámico -->
+    <div id="header"></div>
 
-    <main>
-        <h2>Paquetes Turísticos</h2>
-        <section class="packages">
-            <article>
-                <h3>Plan Caribe</h3>
-                <p>Incluye vuelo, hotel 4 estrellas y tours en Cartagena y San Andrés.</p>
-            </article>
-            <article>
-                <h3>Plan Andino</h3>
-                <p>Recorre Medellín, Bogotá y Cali con transporte y hospedaje incluidos.</p>
-            </article>
-            <article>
-                <h3>Plan Naturaleza</h3>
-                <p>Aventura en el Eje Cafetero y Amazonas con guías especializados.</p>
-            </article>
-        </section>
-    </main>
+    <div class="container">
+        <!-- Sidebar dinámico -->
+        <div id="sidebar"></div>
 
-    <footer id="footer"></footer>
+        <!-- Contenido principal -->
+        <main>
+            <h2>Paquetes Turísticos</h2>
+
+            <!-- Contenedor dinámico -->
+            <section id="product-list" class="packages"></section>
+
+            <!-- Template para clonar -->
+            <template id="product-template">
+                <article class="product-card">
+                    <img src="" alt="Destino">
+                    <h3></h3>
+                    <p class="description"></p>
+                    <div class="price"></div>
+                </article>
+            </template>
+        </main>
+    </div>
+
+    <!-- Footer dinámico -->
+    <div id="footer"></div>
+
+    <script src="js/fragments.js"></script>
+    <script src="js/paquetes.js"></script>
 </body>
 
 </html>

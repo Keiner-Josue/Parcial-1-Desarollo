@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Paquete Cancún 5 días todo incluido",
+    "precio": 4500000,
+    "descripcion": "Vuelo + hotel todo incluido frente al mar.",
+    "imagen": "assets/images/cancun.jpg"
+  },
+  {
+    "nombre": "Paquete Europa 10 días cultural",
+    "precio": 12500000,
+    "descripcion": "Visita París, Roma, Madrid y Barcelona con guía turístico.",
+    "imagen": "assets/images/barcelona.jpg"
+  },
+  {
+    "nombre": "Paquete Cartagena 7 días de sol y playa",
+    "precio": 3600000,
+    "descripcion": "Excursión guiada con hospedaje incluido.",
+    "imagen": "assets/images/cartagena.jpg"
+  },
+  {
+    "nombre": "Paquete New York 14 días de máxima diversión",
+    "precio": 8200000,
+    "descripcion": "Disfruta de una experiencia inolvidable en la Gran Manzana.",
+    "imagen": "assets/images/newyork.jpg"
+  },
+  {
+    "nombre": "Paquete Tokio 12 días de cultura y tecnología",
+    "precio": 22200000,
+    "descripcion": "Explora la modernidad de Tokio y sus tradiciones únicas.",
+    "imagen": "assets/images/tokio.jpg"
+  },
+  {
+    "nombre": "Paquete Maldivas 10 días de lujo y relax",
+    "precio": 12000000,
+    "descripcion": "Escapa a un paraíso tropical con todo incluido.",
+    "imagen": "assets/images/maldivas.jpg"
+  }
+]

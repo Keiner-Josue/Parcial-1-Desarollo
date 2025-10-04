@@ -3,32 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinos - TravelNow</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/utilities.css">
 </head>
 
-<body>
+<body data-page="destinos">
     <header id="header"></header>
 
-    <main>
-        <h2>Destinos Populares</h2>
-        <section class="destinations">
-            <article>
-                <h3>Cartagena</h3>
-                <p>Ciudad histórica con playas paradisíacas y vida nocturna vibrante.</p>
-            </article>
-            <article>
-                <h3>Medellín</h3>
-                <p>La ciudad de la eterna primavera, innovación y cultura.</p>
-            </article>
-            <article>
-                <h3>San Andrés</h3>
-                <p>Playas de arena blanca y mar de siete colores.</p>
-            </article>
-        </section>
-    </main>
+    <div class="container">
+        <aside id="sidebar"></aside>
+
+        <main>
+            <h2>Destinos Populares</h2>
+            <section class="destinations">
+                <div id="destinos-list"></div>
+            </section>
+        </main>
+    </div>
 
     <footer id="footer"></footer>
+
+    <script src="js/fragments.js"></script>
+    <script src="js/destinos.js"></script>
 </body>
 
 </html>

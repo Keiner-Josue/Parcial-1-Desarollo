@@ -3,32 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Flota - TravelNow</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/utilities.css">
 </head>
 
-<body>
+<body data-page="flota">
     <header id="header"></header>
 
-    <main>
-        <h2>Nuestra Flota</h2>
-        <section class="fleet">
-            <article>
-                <h3>Bus Ejecutivo</h3>
-                <p>Asientos reclinables, aire acondicionado y WiFi a bordo.</p>
-            </article>
-            <article>
-                <h3>Bus Premium</h3>
-                <p>Mayor espacio, entretenimiento individual y servicio de snacks.</p>
-            </article>
-            <article>
-                <h3>Minibuses</h3>
-                <p>Ideales para grupos pequeños y traslados rápidos.</p>
-            </article>
-        </section>
-    </main>
+    <div class="container">
+        <aside id="sidebar"></aside>
+
+        <main>
+            <h2>Nuestra Flota</h2>
+            <section class="fleet">
+                <h3>Flota de pasajeros</h3>
+                <div id="fly-list"></div>
+            </section>
+        </main>
+    </div>
 
     <footer id="footer"></footer>
+
+    <script src="js/fragments.js"></script>
+    <script src="js/fly.js"></script>
 </body>
 
 </html>

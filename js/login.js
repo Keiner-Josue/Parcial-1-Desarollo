@@ -1,6 +1,6 @@
 // login.js
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("loginForm");
+  const form = document.getElementById("login-form"); // corregido: coincide con el HTML
   const usernameInput = document.getElementById("username");
   const passwordInput = document.getElementById("password");
   const errorMessage = document.getElementById("error-message");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.setItem("loggedIn", "true");
       sessionStorage.setItem("usuario", username);
 
-      // Redirigir al inicio (index.html en la misma carpeta del login)
+      // Redirigir al inicio
       window.location.href = "index.html";
     } else {
       errorMessage.textContent = "⚠️ Usuario o contraseña incorrectos.";

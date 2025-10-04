@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "Airbus A321-200 ",
+    "capacidad": 220,
+    "En servicio": 45,
+    "servicios": ["Aire acondicionado", "Wi-Fi", "Asientos reclinables", "USB en cada asiento"],
+    "imagen": "assets/images/AirbusA321_200_.jpg",
+    "descripcion": "Es el más grande de la familia A320. Ideal para largo alcance y alta capacidad (hasta 236 pasajeros)."
+  },
+  {
+    "id": 2,
+    "nombre": "Boeing 737-200",
+    "capacidad": 130,
+    "En servicio": 32,
+    "servicios": ["Aire acondicionado", "Wi-Fi", "Sistema de entretenimiento", "Asientos reclinables"],
+    "imagen": "assets/images/Boeing_737_200.jpg",
+    "descripcion": "Perfecto para vuelos de corta y media distancia con alta eficiencia."
+  },
+  {
+    "id": 3,
+    "nombre": "Airbus A320-200",
+    "capacidad": 180,
+    "En servicio": 56,
+    "servicios": ["Aire acondicionado", "Wi-Fi", "Asientos reclinables", "USB en cada asiento"],
+    "imagen": "assets/images/Airbus320_200.jpg",
+    "descripcion": "Ideal para vuelos de corta y media distancia con alta eficiencia y confort."
+  },
+  {
+    "id": 4,
+    "nombre": "Airbus A380-800",
+    "capacidad": 555,
+    "En servicio": 6,
+    "servicios": ["Aire acondicionado", "Wi-Fi", "Asientos reclinables", "Entretenimiento a bordo", "Restaurantes y bares"],
+    "imagen": "assets/images/AirbusA380_800.jpg",
+    "descripcion": "El avión comercial más grande del mundo, perfecto para vuelos internacionales de larga distancia con máximo confort."
+  },
+  {
+    "id": 5,
+    "nombre": "Boeing 777X",
+    "capacidad": 396,
+    "En servicio": 12,
+    "servicios": ["Aire acondicionado", "Wi-Fi", "Asientos reclinables", "Entretenimiento a bordo", "Restaurantes y bares"],
+    "imagen": "assets/images/Boeing777x.jpg",
+    "descripcion": "Avión de fuselaje ancho diseñado para vuelos de larga distancia con alta eficiencia y confort."
+  },
+  {
+    "id": 6,
+    "nombre": "Boeing 747-8F",
+    "capacidad": "140 toneladas de carga",
+    "En servicio": 3,
+    "servicios": ["Aire acondicionado", "Sistema de entretenimiento", "Asientos reclinables"],
+    "imagen": "assets/images/Boeing747_8.jpg",
+    "descripcion": "Versión de carga del icónico Jumbo Jet, ideal para transportar grandes volúmenes de mercancías a largas distancias."
+  }
+]

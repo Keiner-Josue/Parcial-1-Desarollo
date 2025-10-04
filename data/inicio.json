@@ -1,0 +1,63 @@
+{
+  "paquetes": [
+    {
+      "id": 1,
+      "titulo": "Paquetes Personalizados",
+      "descripcion": "Diseña tu viaje ideal con experiencias únicas adaptadas a ti",
+      "imagen": "assets/images/relajacion.jpg",
+      "precio": 2000000,
+      "icono": "🎯"
+    },
+    {
+      "id": 2,
+      "titulo": "Destinos Exóticos",
+      "descripcion": "Descubre paraísos tropicales y ciudades fascinantes",
+      "imagen": "assets/images/cancun.jpg",
+      "precio": 2800000,
+      "icono": "🌴"
+    },
+    {
+      "id": 3,
+      "titulo": "Soporte 24/7",
+      "descripcion": "Asistencia completa en todo momento durante tu viaje",
+      "imagen": "assets/images/barcelona.jpg",
+      "precio": "Incluido",
+      "icono": "💬"
+    }
+  ],
+  "stats": [
+    {
+      "numero": "150+",
+      "etiqueta": "Destinos"
+    },
+    {
+      "numero": "5,000+",
+      "etiqueta": "Viajeros Felices"
+    },
+    {
+      "numero": "24/7",
+      "etiqueta": "Soporte"
+    },
+    {
+      "numero": "4.9★",
+      "etiqueta": "Calificación"
+    }
+  ],
+  "porQueElegirnos": [
+    {
+      "icono": "🎯",
+      "titulo": "Experiencia",
+      "descripcion": "+10 años organizando viajes inolvidables"
+    },
+    {
+      "icono": "💎",
+      "titulo": "Calidad Premium",
+      "descripcion": "Hoteles 5 estrellas y servicios VIP"
+    },
+    {
+      "icono": "💰",
+      "titulo": "Mejor Precio",
+      "descripcion": "Garantía de tarifas competitivas"
+    }
+  ]
+}

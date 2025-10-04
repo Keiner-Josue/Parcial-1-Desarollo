@@ -1,35 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <title>TravelNow - Agencia de Viajes</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelNow - Descubre el Mundo</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
   <header id="header"></header>
-
+  
   <div class="container">
     <aside id="sidebar"></aside>
-
+    
     <main>
-      <h2>Paquetes Turísticos</h2>
-      <template id="product-template">
-        <div class="product-card">
-          <img src="" alt="imagen destino">
-          <h3></h3>
-          <p class="description"></p>
-          <p class="price"></p>
+      <!-- Hero Section Mejorado -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Descubre el mundo con <span class="highlight">TravelNow</span>
+          </h1>
+          <p class="hero-subtitle">
+            Explora destinos increíbles, paquetes personalizados y viajes inolvidables. 
+            Tu próxima aventura comienza aquí.
+          </p>
+          <div class="hero-buttons">
+            <a href="paquetes.html" class="btn btn-primary">
+              ✈️ Ver Paquetes
+            </a>
+            <a href="destinos.html" class="btn btn-secondary">
+              🌍 Explorar Destinos
+            </a>
+          </div>
         </div>
-      </template>
-      <div id="product-list"></div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="stat-card">
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Destinos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Viajeros Felices</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Soporte</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4.9★</div>
+          <div class="stat-label">Calificación</div>
+        </div>
+      </section>
+
+      <!-- Paquetes Section -->
+      <section id="product-list" class="features">
+        <h2 class="section-title">Paquetes Turísticos Destacados</h2>
+        <div class="packages">
+          <div class="product-card">
+            <img src="assets/images/relajacion.jpg" alt="Paquetes personalizados">
+            <h3>Paquetes Personalizados</h3>
+            <p class="description">
+              Diseña tu viaje ideal con experiencias únicas adaptadas a ti
+            </p>
+            <p class="price">Desde $499</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="assets/images/cancun.jpg" alt="Destinos exóticos">
+            <h3>Destinos Exóticos</h3>
+            <p class="description">
+              Descubre paraísos tropicales y ciudades fascinantes
+            </p>
+            <p class="price">Desde $699</p>
+          </div>
+          
+          <div class="product-card">
+            <img src="assets/images/barcelona.jpg" alt="Soporte 24/7">
+            <h3>Soporte 24/7</h3>
+            <p class="description">
+              Asistencia completa en todo momento durante tu viaje
+            </p>
+            <p class="price">Incluido</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="why-choose-section">
+        <h2 class="section-title">¿Por qué elegir TravelNow?</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Experiencia</h3>
+            <p>+10 años organizando viajes inolvidables</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">💎</div>
+            <h3>Calidad Premium</h3>
+            <p>Hoteles 5 estrellas y servicios VIP</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3>Mejor Precio</h3>
+            <p>Garantía de tarifas competitivas</p>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
-
+  
   <footer id="footer"></footer>
+  
+  <script src="js/fragments.js"></script>
+  <script src="js/main.js"></script>
 </body>
-<script src="js/fragments.js"></script>
-<script src="js/main.js"></script>
-
 </html>
