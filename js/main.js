@@ -34,7 +34,7 @@ function cargarPaquetes(paquetes) {
         const precioTexto = typeof paquete.precio === 'number'
             ? `Desde $${paquete.precio.toLocaleString('es-CO')} COP`
             : paquete.precio;
-        
+
         const cardHTML = `
             <div class="product-card">
                 <img src="${paquete.imagen}" alt="${paquete.titulo}" loading="lazy">

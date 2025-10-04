@@ -1,0 +1,861 @@
+/* ================================
+   COMPONENTS.CSS - Componentes
+   ================================ */
+
+/* Tarjetas de productos */
+.product-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid transparent;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+/* Imagen del producto */
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+    position: relative;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+}
+
+.product-card:hover::after {
+    opacity: 1;
+}
+
+/* Contenido de la tarjeta */
+.product-card h3 {
+    padding: var(--space-md) var(--space-md) var(--space-sm);
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.6em;
+}
+
+.product-card .description {
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-card .price {
+    padding: var(--space-md);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+    color: var(--accent-purple);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card .price::before {
+    content: '💰';
+    margin-right: var(--space-xs);
+    font-size: 1.2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Botones (para futuras implementaciones) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width var(--transition-base), height var(--transition-base);
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    color: var(--bg-white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary {
+    background: var(--bg-white);
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-dark);
+    color: var(--bg-white);
+}
+
+/* Badge/Etiquetas */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    color: var(--bg-white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Loading spinner (para futuras implementaciones) */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--bg-light);
+    border-top-color: var(--accent-cyan);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Card container con animación de entrada */
+#product-list .product-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+#product-list .product-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#product-list .product-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#product-list .product-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#product-list .product-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+#product-list .product-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para tarjetas de flota */
+.fleet-card .capacity {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 0.5rem;
+    margin: 0 1rem 1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.fleet-card .services {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.fleet-card .services strong {
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.fleet-card .services ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fleet-card .services li {
+    padding: 0.25rem 0;
+    color: var(--text-gray);
+}
+
+/* Estilos para artículos de flota */
+.fleet article {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-lg);
+    transition: all var(--transition-base);
+}
+
+.fleet article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.fleet article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.fleet article h4 {
+    padding: var(--space-md) var(--space-md) var(--space-sm);
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.fleet article p {
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.fleet article .capacity {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 0.5rem;
+    margin: 0 1rem 1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.fleet article .description {
+    padding: 0 1rem 1rem;
+    color: var(--text-gray);
+}
+
+.fleet article .services {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.fleet article .services strong {
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.fleet article .services ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fleet article .services li {
+    padding: 0.25rem 0;
+    color: var(--text-gray);
+}
+
+.fleet article .price {
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+    color: var(--accent-purple);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* ================================
+   FLEET CARDS - Tarjetas de Flota
+   ================================ */
+
+#fly-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.fleet-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fleet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-cyan);
+}
+
+.fleet-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.fleet-card:hover img {
+    transform: scale(1.08);
+}
+
+.fleet-content {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    flex-grow: 1;
+}
+
+.fleet-content h4 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Stats (capacidad y en servicio) */
+.fleet-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+}
+
+.stat {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(124, 58, 237, 0.08));
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* Descripción */
+.fleet-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Servicios */
+.fleet-services {
+    background: var(--bg-light);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-top: auto;
+}
+
+.fleet-services h5 {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.fleet-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+}
+
+.fleet-services li {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.fleet-services .check {
+    color: var(--success);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #fly-list {
+        grid-template-columns: 1fr;
+    }
+
+    .fleet-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   DESTINOS CARDS - Tarjetas de Destinos
+   ================================ */
+
+#destinos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.destino-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.destino-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-xl);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 1;
+}
+
+.destino-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.destino-card:hover::before {
+    opacity: 1;
+}
+
+.destino-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+    position: relative;
+}
+
+.destino-card:hover img {
+    transform: scale(1.15);
+}
+
+/* Badge del país */
+.destino-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    color: var(--bg-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    box-shadow: var(--shadow-md);
+}
+
+/* Contenido de la tarjeta */
+.destino-content {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    flex-grow: 1;
+}
+
+.destino-content h4 {
+    font-size: 1.75rem;
+    color: var(--primary-dark);
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Info principal (duración y distancia) */
+.destino-info {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+    border-radius: var(--radius-md);
+    flex: 1;
+}
+
+.info-icon {
+    font-size: 1.3rem;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+/* Descripción */
+.destino-description {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Detalles del vuelo */
+.flight-details {
+    background: var(--bg-light);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+.detail-value {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Precio */
+.destino-price {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.destino-price::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-30%, -30%) rotate(180deg);
+    }
+}
+
+.price-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.price-value {
+    font-size: 2rem;
+    color: var(--bg-white);
+    font-weight: 900;
+    line-height: 1;
+    margin: 0.25rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.price-currency {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+/* Animación de entrada */
+#destinos-list .destino-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+#destinos-list .destino-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#destinos-list .destino-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+#destinos-list .destino-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#destinos-list .destino-card:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+#destinos-list .destino-card:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+#destinos-list .destino-card:nth-child(6) {
+    animation-delay: 0.35s;
+}
+
+#destinos-list .destino-card:nth-child(7) {
+    animation-delay: 0.4s;
+}
+
+#destinos-list .destino-card:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+#destinos-list .destino-card:nth-child(9) {
+    animation-delay: 0.5s;
+}
+
+#destinos-list .destino-card:nth-child(10) {
+    animation-delay: 0.55s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #destinos-list {
+        grid-template-columns: 1fr;
+    }
+
+    .destino-info {
+        flex-direction: column;
+    }
+}
+
+/* =====================
+   LOGIN PAGE STYLES
+   ===================== */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-xl);
+}
+
+.login-card {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: var(--space-md);
+    color: var(--primary-dark);
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.login-card input {
+    padding: var(--space-sm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+.login-card button {
+    padding: var(--space-sm);
+    font-size: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-card button:hover {
+    background: var(--primary-dark);
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+}

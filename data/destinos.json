@@ -19,7 +19,9 @@
     "duracion": "10h 30min",
     "avion": "Boeing 737-200",
     "escalas": 1,
-    "escalasCiudades": ["Ciudad de México"],
+    "escalasCiudades": [
+      "Ciudad de México"
+    ],
     "precio": 1525000,
     "imagen": "assets/images/Tijuana.jpg",
     "descripcion": "Ciudad fronteriza vibrante con cultura única y gastronomía de clase mundial."
@@ -56,7 +58,10 @@
     "duracion": "31h 25min",
     "avion": "Airbus A380-800",
     "escalas": 2,
-    "escalasCiudades": ["Londres", "Frankfurt"],
+    "escalasCiudades": [
+      "Londres",
+      "Frankfurt"
+    ],
     "precio": 21500000,
     "imagen": "assets/images/Moscu.jpg",
     "descripcion": "Capital rusa con arquitectura histórica impresionante, el Kremlin y la Plaza Roja."
@@ -69,7 +74,9 @@
     "duracion": "6h 15min",
     "avion": "Boeing 777X",
     "escalas": 1,
-    "escalasCiudades": ["Miami"],
+    "escalasCiudades": [
+      "Miami"
+    ],
     "precio": 1490000,
     "imagen": "assets/images/Chicago.jpg",
     "descripcion": "Ciudad del viento, arquitectura moderna, jazz y gastronomía estadounidense icónica."
@@ -82,7 +89,9 @@
     "duracion": "14h 30min",
     "avion": "Airbus A380-800",
     "escalas": 1,
-    "escalasCiudades": ["Madrid"],
+    "escalasCiudades": [
+      "Madrid"
+    ],
     "precio": 5480000,
     "imagen": "assets/images/roma.jpg",
     "descripcion": "La ciudad eterna, cuna de la civilización occidental con historia milenaria."
@@ -119,7 +128,10 @@
     "duracion": "29h 55min",
     "avion": "Airbus A380-800",
     "escalas": 2,
-    "escalasCiudades": ["Los Ángeles", "Tokio"],
+    "escalasCiudades": [
+      "Los Ángeles",
+      "Tokio"
+    ],
     "precio": 8200000,
     "imagen": "assets/images/chongqing.jpg",
     "descripcion": "Megalópolis china conocida como la ciudad de la niebla, gastronomía picante única."

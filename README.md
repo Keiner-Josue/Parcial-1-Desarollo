@@ -40,13 +40,6 @@ El objetivo es simular una página de agencia de viajes donde los usuarios puede
 
 ---
 
-## ✨ Mejoras futuras
-- Implementación de un **Web Component `<product-card>`** con Shadow DOM.
-- Persistencia de usuarios y reservas usando **LocalStorage**.
-- Versión responsive completa para móviles.
-
----
-
 👨‍💻 **Autores:**  
-- Keiner Josue Barbosa Calderon - 192502  
-- Laura Michell Garcia Uribe - 192501
+- 👨🏾‍💻Keiner Josue Barbosa Calderon - 192502  
+- 👩🏻‍💻Laura Michell Garcia Uribe - 192501

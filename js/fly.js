@@ -5,20 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
     fleet.forEach(vehicle => {
       const article = document.createElement("article");
       article.className = "fleet-card";
-      
+
       // Imagen
       const img = document.createElement("img");
       img.src = vehicle.imagen || "";
       img.alt = vehicle.nombre;
-      
+
       // Contenedor de contenido
       const content = document.createElement("div");
       content.className = "fleet-content";
-      
+
       // Nombre
       const h4 = document.createElement("h4");
       h4.textContent = vehicle.nombre;
-      
+
       // Stats (capacidad y en servicio)
       const stats = document.createElement("div");
       stats.className = "fleet-stats";
@@ -38,28 +38,28 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `;
-      
+
       // Descripción
       const description = document.createElement("p");
       description.className = "fleet-description";
       description.textContent = vehicle.descripcion;
-      
+
       // Servicios
       const servicesDiv = document.createElement("div");
       servicesDiv.className = "fleet-services";
-      servicesDiv.innerHTML = '<h5>Servicios incluidos</h5><ul>' + 
-        vehicle.servicios.map(s => `<li><span class="check">✓</span> ${s}</li>`).join('') + 
+      servicesDiv.innerHTML = '<h5>Servicios incluidos</h5><ul>' +
+        vehicle.servicios.map(s => `<li><span class="check">✓</span> ${s}</li>`).join('') +
         '</ul>';
-      
+
       // Ensamblar todo
       content.appendChild(h4);
       content.appendChild(stats);
       content.appendChild(description);
       content.appendChild(servicesDiv);
-      
+
       article.appendChild(img);
       article.appendChild(content);
-      
+
       container.appendChild(article);
     });
   }
